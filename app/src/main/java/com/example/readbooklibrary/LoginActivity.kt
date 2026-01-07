@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         binding.loginBtn.setOnClickListener {
             loginUser()
         }
-        binding.registerBtn.setOnClickListener {
+        binding.registerButton.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
 
         }

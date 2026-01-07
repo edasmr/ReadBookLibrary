@@ -26,8 +26,11 @@
             android:name=".BookReaderActivity"
             android:exported="false" />
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="false" /> <!-- YENİ Başlangıç Activity - intent-filter EKLE -->
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
