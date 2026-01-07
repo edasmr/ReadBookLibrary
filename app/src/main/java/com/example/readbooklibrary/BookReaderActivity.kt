@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.core.graphics.toColorInt
 import java.net.URL
 
@@ -46,6 +47,10 @@ class BookReaderActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnIncrease).setOnClickListener {
             textSizeSp += 2
             updateTextSize()
+        }
+
+        findViewById<ImageButton>(R.id.btnBack).setOnClickListener {
+            finish()
         }
 
         findViewById<Button>(R.id.btnDecrease).setOnClickListener {
@@ -106,7 +111,7 @@ class BookReaderActivity : AppCompatActivity() {
         showPage()
     }
 
-    // 🌙 GECE MODU
+    // GECE MODU
     private fun toggleNightMode() {
         isNightMode = !isNightMode
 
