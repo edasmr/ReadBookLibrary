@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+   >
+
+    <fragment
+        android:id="@+id/bookReaderFragment"
+        android:name="com.example.readbooklibrary.HomeFragment"
+        android:label="Kitap Oku"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_home_to_bookReader"
+            app:destination="@id/bookReaderFragment" />
+
+        <argument
+            android:name="bookId"
+            app:argType="string" /> <!-- Hangi kitabı açacağımızı göndereceğiz -->
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.readbooklibrary.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/actionHomeToBookReader"
+            app:destination="@id/bookReaderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.readbooklibrary.FavoriteFragment"
+        android:label="Favoriler">
+
+        <action
+            android:id="@+id/action_favorite_to_bookReader"
+            app:destination="@id/bookReaderFragment" />
+    </fragment>
+
+</navigation>
